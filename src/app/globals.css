@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.25);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

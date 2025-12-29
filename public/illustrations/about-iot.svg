@@ -1,0 +1,38 @@
+<svg width="900" height="700" viewBox="0 0 900 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="120" y1="140" x2="780" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B82F6" stop-opacity="0.35"/>
+      <stop offset="0.55" stop-color="#6366F1" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0.25"/>
+    </linearGradient>
+    <filter id="b" x="-200" y="-200" width="1300" height="1100" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#b)">
+    <circle cx="280" cy="270" r="190" fill="url(#g)"/>
+    <circle cx="610" cy="430" r="210" fill="url(#g)" opacity="0.85"/>
+  </g>
+
+  <!-- stylized phone + signal -->
+  <g transform="translate(330 170)">
+    <rect x="0" y="0" width="240" height="420" rx="34" fill="rgba(255,255,255,0.60)" stroke="rgba(30,64,175,0.20)"/>
+    <rect x="20" y="48" width="200" height="320" rx="22" fill="rgba(59,130,246,0.08)" stroke="rgba(99,102,241,0.22)"/>
+    <circle cx="120" cy="392" r="18" fill="rgba(99,102,241,0.18)"/>
+
+    <g stroke="rgba(59,130,246,0.55)" stroke-width="10" stroke-linecap="round">
+      <path d="M-30 160 C-60 220 -60 260 -30 320"/>
+      <path d="M-60 130 C-110 220 -110 260 -60 350" opacity="0.75"/>
+      <path d="M270 160 C300 220 300 260 270 320"/>
+      <path d="M300 130 C350 220 350 260 300 350" opacity="0.75"/>
+    </g>
+
+    <g opacity="0.9">
+      <circle cx="70" cy="120" r="10" fill="rgba(99,102,241,0.55)"/>
+      <circle cx="170" cy="150" r="10" fill="rgba(59,130,246,0.55)"/>
+      <circle cx="110" cy="210" r="10" fill="rgba(147,197,253,0.85)"/>
+      <path d="M70 120 L110 210 L170 150" stroke="rgba(30,64,175,0.25)" stroke-width="4"/>
+    </g>
+  </g>
+</svg>
