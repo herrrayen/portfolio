@@ -4,7 +4,7 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-8">Get In Touch</h2>
         <p className="text-lg text-gray-600 mb-8">
-          Interested in IoT projects, embedded systems, or collaborations? Let's connect!
+          Interested in IoT projects, embedded systems, or collaborations? Let&apos;s connect!
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

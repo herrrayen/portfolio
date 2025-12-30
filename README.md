@@ -50,6 +50,22 @@ npm run build
 npm start
 ```
 
+## Export as Static Files
+
+This project can be exported as a fully static site (no Node.js server) and deployed on any static host.
+
+```bash
+npm run export
+```
+
+The static website will be generated in the `out/` folder.
+
+To preview locally:
+
+```bash
+npx serve out
+```
+
 ## Tech Stack
 
 - Next.js 15

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
+import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 
 export type Language = "fr" | "en";
 
@@ -35,20 +35,20 @@ export default function LanguageProvider({
     setLangState(inferred);
   }, []);
 
-  const setLang = (next: Language) => {
+  const setLang = useCallback((next: Language) => {
     setLangState(next);
     try {
       window.localStorage.setItem("portfolio_lang", next);
     } catch {
       // ignore
     }
-  };
+  }, []);
 
-  const toggleLang = () => setLang(lang === "fr" ? "en" : "fr");
+  const toggleLang = useCallback(() => setLang(lang === "fr" ? "en" : "fr"), [lang, setLang]);
 
   const value = useMemo<LanguageContextValue>(
     () => ({ lang, setLang, toggleLang }),
-    [lang]
+    [lang, setLang, toggleLang]
   );
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
